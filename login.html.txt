@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificabelha | Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container d-flex align-items-center justify-content-center" style="min-height: 100vh; padding-top: 0 !important;">
+        <div class="form-card-dev p-5 mx-auto" style="max-width: 500px;">
+            <h2 class="text-center mb-4" style="color: var(--color-secondary);">Login de Acesso</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="usernameEmail" class="form-label">Nome de Usuário ou E-mail</label>
+                    <input type="text" class="form-control" id="usernameEmail" required>
+                </div>
+                <div class="mb-3">
+                    <label for="senha" class="form-label">Senha</label>
+                    <input type="password" class="form-control" id="senha" required>
+                </div>
+                <div class="d-grid gap-3 mt-4">
+                    <button type="button" class="btn btn-primary-dev btn-lg shadow" onclick="window.location.href='denuncia.html'">
+                        ENTRAR NA PLATAFORMA
+                    </button>
+                    <button type="button" class="btn btn-outline-dev" onclick="window.location.href='pagInicial.html#form-cadastro'" style="padding: 0.5rem 1rem;">
+                        Ainda não tenho conta
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

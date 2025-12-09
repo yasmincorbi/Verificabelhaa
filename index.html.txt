@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Verificabelha | O Verificador Definitivo</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <link rel="icon" href="img/imagem carousel 1.png" />
+    <link rel="stylesheet" href="verificabelha.css" /> 
+</head>
+<body>
+
+<header class="site-header">
+    <nav class="navbar container navbar-expand-lg">
+        
+        <div class="d-flex align-items-center brand">
+            <img src="img/imagem carousel 1.png" alt="Verificabelha logo" class="brand-logo">
+            <a class="navbar-brand ms-2" href="index.html">Verificabelha</a>
+        </div>
+
+        <button class="navbar-toggler" type="button" 
+                data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+            <ul class="navbar-nav align-items-lg-center gap-3 py-2 py-lg-0">
+                <li class="nav-item"><a class="nav-link" href="rank.html">Rank</a></li>
+                <li class="nav-item"><a class="nav-link" href="relatorios.html">Relatórios</a></li>
+                <li class="nav-item"><a class="nav-link" href="configuracao.html">Configurações</a></li>
+                <li class="nav-item"><a class="nav-link" href="pagDoEspecialista.html">Especialista</a></li>
+                
+                <li class="nav-item">
+                    <a class="btn btn-primary-dev btn-sm" href="denuncia.html">
+                        <i class="bi bi-send-fill me-1"></i> Denúncias
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<section class="container section hero" style="padding-top: 5rem;">
+    <div class="row align-items-center g-5">
+
+        <div class="col-lg-6">
+            <h1 class="mb-4">Inteligência para Decifrar a <span class="text-primary">Informação</span>.</h1>
+            <p class="lead mb-4 text-text-dark">
+                A plataforma mais moderna, rápida e inteligente para verificar conteúdos. 
+                Trazendo clareza ao que é real, com o apoio de IA e especialistas verificados.
+            </p>
+            <a href="denuncia.html" class="btn btn-primary-dev btn-lg shadow-lg">
+                <i class="bi bi-search me-2"></i> Verificar Conteúdo Agora!
+            </a>
+            <p class="text-muted mt-3 mb-0" style="font-size: 0.9rem;">
+                <span class="text-primary fw-bold">+50 mil</span> checagens realizadas este mês.
+            </p>
+        </div>
+
+        <div class="col-lg-6">
+            <div id="heroCarousel" class="carousel slide w-100" data-bs-ride="carousel">
+                <div class="carousel-inner" style="border-radius: var(--border-radius-lg); overflow: hidden; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);">
+                    <div class="carousel-item active">
+                        <img src="img/imagem carousel 1.png" class="d-block w-100" alt="Imagem 1" loading="lazy">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/imagem carousel 2.jpeg" class="d-block w-100" alt="Imagem 2" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container section pt-0">
+    <h2 class="text-center mb-5 display-5 fw-bold">Tecnologia e Vantagens da Colmeia</h2>
+    <p class="lead text-center mb-5 text-text-light" style="max-width: 800px; margin: 0 auto;">
+        Combinamos a eficiência da Inteligência Artificial com a experiência humana para oferecer verificações inquestionáveis e rápidas.
+    </p>
+    
+    <div class="row g-5">
+        
+        <div class="col-md-6 col-lg-4">
+            <div class="card-dev p-4">
+                <i class="bi bi-robot display-5 text-accent mb-3"></i>
+                <h4 class="fw-bold mb-2">IA Otimizada para Fact-Checking</h4>
+                <p class="text-text-light">Nossos modelos de linguagem são treinados especificamente em fontes de notícias e dados técnicos para alta precisão.</p>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="card-dev p-4">
+                <i class="bi bi-person-workspace display-5 text-secondary mb-3"></i>
+                <h4 class="fw-bold mb-2">Comunidade de Especialistas</h4>
+                <p class="text-text-light">Todos os pareceres mais complexos passam por especialistas nas áreas de direito, medicina e ciência.</p>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="card-dev p-4">
+                <i class="bi bi-lock display-5 text-primary mb-3"></i>
+                <h4 class="fw-bold mb-2">Foco em Segurança e Privacidade</h4>
+                <p class="text-text-light">Seus dados e denúncias são criptografados e tratados com o máximo rigor de confidencialidade.</p>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="card-dev p-4">
+                <i class="bi bi-code-slash display-5 text-accent mb-3"></i>
+                <h4 class="fw-bold mb-2">Integrações Abertas (API)</h4>
+                <p class="text-text-light">Integre nosso sistema de verificação em suas próprias aplicações ou sites de notícias de forma simples e rápida.</p>
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4">
+            <div class="card-dev p-4">
+                <i class="bi bi-file-earmark-bar-graph display-5 text-secondary mb-3"></i>
+                <h4 class="fw-bold mb-2">Relatórios de Transparência</h4>
+                <p class="text-text-light">Publicamos relatórios regulares sobre a atividade, taxa de acerto e o ranking dos nossos colaboradores.</p>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="card-dev p-4">
+                <i class="bi bi-headset display-5 text-primary mb-3"></i>
+                <h4 class="fw-bold mb-2">Suporte e Comunidade</h4>
+                <p class="text-text-light">Apoio contínuo e uma comunidade ativa para tirar dúvidas e melhorar o sistema de verificação.</p>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+<section class="container section pt-0">
+    <h2 class="text-center mb-5">Como funciona?</h2>
+    <div class="row g-4 mt-4">
+        <div class="col-md-4">
+            <div class="card-dev">
+                <h4 class="mb-3 text-secondary">1. Envie o Conteúdo</h4>
+                <p>Texto, imagem, vídeo ou link — nossa IA filtra automaticamente o tipo de suspeita.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card-dev">
+                <h4 class="mb-3 text-secondary">2. Especialistas Analisam</h4>
+                <p>Profissionais verificados avaliam o caso usando critérios técnicos.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card-dev">
+                <h4 class="mb-3 text-secondary">3. Você Recebe o Parecer</h4>
+                <p>Um relatório claro, rápido e transparente, direto na sua conta.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container section" style="background-color: var(--color-muted);">
+    <h2 class="text-center mb-5">O que dizem?</h2>
+
+    <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+            <div class="testimonial-card shadow">
+                <i class="bi bi-quote display-6 text-primary mb-3"></i>
+                <p>"Finalmente um lugar confiável para verificar conteúdo! Salvou meu TCC."</p>
+                <span>— Ana Silva, Estudante</span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="testimonial-card shadow">
+                <i class="bi bi-quote display-6 text-primary mb-3"></i>
+                <p>"Uso no jornal. Reduzi muito as chances de cair em fake news."</p>
+                <span>— Paulo Henrique, Jornalista</span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="testimonial-card shadow">
+                <i class="bi bi-quote display-6 text-primary mb-3"></i>
+                <p>"A combinação de IA com especialistas faz toda a diferença. Essencial."</p>
+                <span>— Helena Castro, Pesquisadora</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="form-cadastro" class="container section">
+    <div class="card form-card-dev p-5 mx-auto" style="max-width: 680px;">
+        <h2 class="text-center mb-5 text-secondary">Cadastre-se e Inicie a Sua Primeira Denúncia</h2>
+
+        <form>
+            <div class="mb-3">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="email" required>
+                <div class="form-text">Cheque seu e-mail antes da confirmação.</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="username" class="form-label">Nome de Usuário</label>
+                <input type="text" class="form-control" id="username" required>
+            </div>
+
+            <div class="row mb-4 g-3">
+                <div class="col-md-6">
+                    <label for="senha" class="form-label">Senha</label>
+                    <input type="password" class="form-control" id="senha" required>
+                    <div class="form-text">Tome cuidado com suas senhas.</div>
+                </div>
+                <div class="col-md-6">
+                    <label for="senha2" class="form-label">Repita a senha</label>
+                    <input type="password" class="form-control" id="senha2" required>
+                </div>
+            </div>
+
+            <div class="mb-4">
+    <label for="servidor" class="form-label">Selecione o servidor:</label>
+    <select id="servidor" name="servidor" class="form-select" required>
+        <optgroup label="🌎 América">
+            <option value="brasil">🇧🇷 Brasil</option>
+            <option value="estados_unidos">🇺🇸 Estados Unidos</option>
+            <option value="canada">🇨🇦 Canadá</option>
+            <option value="mexico">🇲🇽 México</option>
+            <option value="argentina">🇦🇷 Argentina</option>
+            <option value="chile">🇨🇱 Chile</option>
+        </optgroup>
+        <optgroup label="🌍 Europa">
+            <option value="alemanha">🇩🇪 Alemanha</option>
+            <option value="reino_unido">🇬🇧 Reino Unido</option>
+            <option value="franca">🇫🇷 França</option>
+            <option value="espanha">🇪🇸 Espanha</option>
+            <option value="portugal">🇵🇹 Portugal</option>
+            <option value="italia">🇮🇹 Itália</option>
+            <option value="russia">🇷🇺 Rússia</option>
+        </optgroup>
+        <optgroup label="🌏 Ásia">
+            <option value="japao">🇯🇵 Japão</option>
+            <option value="coreia_do_sul">🇰🇷 Coreia do Sul</option>
+            <option value="china">🇨🇳 China</option>
+            <option value="india">🇮🇳 Índia</option>
+            <option value="emirados_arabes">🇦🇪 Emirados Árabes Unidos</option>
+            <option value="singapura">🇸🇬 Singapura</option>
+        </optgroup>
+        <optgroup label="Outros Continentes">
+            <option value="australia">🇦🇺 Austrália</option>
+            <option value="africa_do_sul">🇿🇦 África do Sul</option>
+            <option value="egito">🇪🇬 Egito</option>
+        </optgroup>
+    </select>
+</div>
+
+            <div class="d-grid gap-3">
+                <button type="button" class="btn btn-primary-dev btn-lg shadow" onclick="window.location.href='denuncia.html'">
+                    <i class="bi bi-person-fill-add me-2"></i> CRIAR CONTA E ACESSAR A PLATAFORMA
+                </button>
+
+                <button type="button" class="btn btn-outline-dev" onclick="window.location.href='login.html'">
+                    Entrar em uma conta existente
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<footer class="site-footer">
+    <div class="container text-center py-4">
+        <small>© <span id="year"></span> Verificabelha · All rights reserved.</small>
+    </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

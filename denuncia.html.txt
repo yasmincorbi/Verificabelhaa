@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificabelha – Denúncias</title> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <link rel="icon" href="img/imagem carousel 1.png" />
+    <link rel="stylesheet" href="verificabelha.css"> 
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="navbar container navbar-expand-lg">
+    
+    <div class="d-flex align-items-center brand">
+      <img src="img/imagem carousel 1.png" alt="Verificabelha logo" class="brand-logo">
+      <a class="navbar-brand ms-2" href="index.html">Verificabelha</a>
+    </div>
+
+    <button class="navbar-toggler" type="button" 
+            data-bs-toggle="collapse" data-bs-target="#mainNav"
+            aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+      <ul class="navbar-nav align-items-lg-center gap-3 py-2 py-lg-0">
+        <li class="nav-item"><a class="nav-link" href="rank.html">Rank</a></li>
+        <li class="nav-item"><a class="nav-link" href="relatorios.html">Relatórios</a></li>
+        <li class="nav-item">
+            <a class="nav-link active btn btn-primary-dev btn-sm" aria-current="page" href="configuracao.html">
+                <i class="bi bi-gear-fill me-1"></i> Configurações
+            </a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="denuncia.html">Denúncias</a></li>
+        <li class="nav-item"><a class="nav-link" href="pagDoEspecialista.html">Especialista</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+<!-- HERO -->
+<section class="container section pt-5 pb-5 text-center">
+    <div class="p-4">
+        <i class="bi bi-inbox-fill display-2 mb-3 text-secondary"></i>
+        <h1 class="fw-bold mt-2 display-5">Painel de Denúncias</h1> 
+        <p class="lead text-text-light mb-4" style="max-width: 600px; margin: 0 auto;">
+          Monitore e envie denúncias com segurança. Acompanhe o status em tempo real.
+        </p>
+
+        <!-- BOTÃO ABRE FORM -->
+        <button class="btn btn-primary-dev btn-lg shadow-sm" 
+                data-bs-toggle="modal" data-bs-target="#formDenunciaModal">
+            <i class="bi bi-plus-circle-fill me-2"></i> Fazer uma Denúncia
+        </button>
+    </div>
+</section>
+
+
+<!-- MODAL + FORM REAL -->
+<div class="modal fade" id="formDenunciaModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+
+            <div class="modal-header" style="border-bottom: 2px solid var(--color-muted);">
+                <h5 class="modal-title fw-bold text-secondary">
+                    <i class="bi bi-clipboard-plus me-2"></i> Nova Denúncia
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                
+                <!-- FORM REAL -->
+                <form action="salvarDenuncia.php" method="POST" enctype="multipart/form-data" class="row g-3">
+
+                    <div class="col-12">
+                        <label class="form-label fw-semibold">
+                            Tipo de Denúncia <span class="text-danger">*</span>
+                        </label>
+                        <select class="form-select form-select-lg" name="tipo" required>
+                            <option value="" disabled selected>Selecione</option>
+                            <option value="fake_news">Fake News</option>
+                            <option value="desinformacao">Desinformação</option>
+                            <option value="odio">Discurso de Ódio</option>
+                            <option value="golpe">Golpe/Fraude</option>
+                            <option value="manipulacao">Manipulação de Mídia</option>
+                            <option value="spam">Spam</option>
+                        </select>
+                    </div>
+
+                    <div class="col-12">
+                        <label class="form-label fw-semibold">Título da denúncia *</label>
+                        <input type="text" class="form-control form-control-lg"
+                               name="titulo" required 
+                               placeholder="Descreva o assunto">
+                    </div>
+
+                    <div class="col-12">
+                        <label class="form-label fw-semibold">URL do Conteúdo</label>
+                        <input type="url" class="form-control" name="url"
+                               placeholder="https://exemplo.com">
+                    </div>
+
+                    <div class="col-12">
+                        <label class="form-label fw-semibold">Descrição Detalhada *</label>
+                        <textarea class="form-control" name="descricao" rows="4" required
+                                  placeholder="Explique por que o conteúdo é suspeito..."></textarea>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label fw-semibold">Plataforma *</label>
+                        <select class="form-select" name="plataforma" required>
+                            <option disabled selected>Selecione</option>
+                            <option>WhatsApp</option>
+                            <option>Instagram</option>
+                            <option>Facebook</option>
+                            <option>TikTok</option>
+                            <option>Email</option>
+                            <option>Outros</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label fw-semibold">Urgência</label>
+                        <select class="form-select" name="urgencia">
+                            <option>Baixa</option>
+                            <option>Média</option>
+                            <option>Alta</option>
+                            <option>Crítica</option>
+                        </select>
+                    </div>
+
+                    <div class="col-12">
+                        <label class="form-label fw-semibold">Seu e-mail *</label>
+                        <input type="email" class="form-control" name="email" required>
+                    </div>
+
+                    <div class="col-12">
+                        <label class="form-label fw-semibold">Anexos (opcional)</label>
+                        <input type="file" class="form-control" name="arquivo" accept="image/*, .pdf">
+                    </div>
+
+                    <div class="col-12 form-check mt-3">
+                        <input type="checkbox" class="form-check-input" required>
+                        <label class="form-check-label small">
+                            Confirmo que as informações são verdadeiras.
+                        </label>
+                    </div>
+
+                    <div class="col-12 d-flex gap-3 pt-4 border-top mt-4">
+                        <button type="submit" class="btn btn-primary-dev btn-lg w-75">
+                            <i class="bi bi-send-fill me-2"></i> Enviar Denúncia
+                        </button>
+
+                        <button type="button" class="btn btn-outline-dev btn-lg w-25"
+                                data-bs-dismiss="modal">Cancelar</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer class="site-footer mt-5">
+    <div class="container text-center py-4">
+        <small>© <span id="year"></span> Verificabelha · All rights reserved.</small>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

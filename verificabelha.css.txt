@@ -1,0 +1,463 @@
+:root {
+    /* ==================================== */
+    /* 🎨 CORES E TEMAS                      */
+    /* ==================================== */
+    --color-primary: #FFD700;       /* Amarelo Ouro (Abelha) */
+    --color-secondary: #1F2937;     /* Azul Escuro (Dev/GitHub-like) */
+    --color-accent: #3B82F6;        /* Azul Claro (Destaque/Ações) */
+    --color-background: #F9FAFB;    /* Fundo Claro */
+    --color-card-bg: #FFFFFF;       /* Fundo de Cartão Branco */
+    --color-muted: #E5E7EB;         /* Cinza Suave (Para seções e bordas) */
+    --color-danger: #EF4444;        /* Vermelho (Alerta/Urgência Alta) */
+
+    /* TEXTO */
+    --color-text-dark: #374151;     /* Texto Principal Escuro */
+    --color-text-light: #6B7280;    /* Texto Secundário Cinza */
+
+    /* ==================================== */
+    /* 📐 ESPAÇAMENTO E BORDA (MÁXIMO)      */
+    /* ==================================== */
+    --border-radius-sm: 0.5rem;
+    --border-radius-lg: 1rem;
+    /* MÁXIMO ESPAÇAMENTO EXTERNO: 12rem (192px) */
+    --spacing-section: 12rem; 
+    --navbar-height: 5rem;
+}
+
+/* ==================================== */
+/* 🐝 ESTILOS BASE E TIPOGRAFIA         */
+/* ==================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--color-text-dark);
+    background-color: var(--color-background);
+    padding-top: var(--navbar-height); 
+    overflow-x: hidden;
+}
+
+/* Tipografia de Cabeçalhos */
+h1, h2, h3, h4, .display-4, .display-5, .display-6 {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: var(--color-secondary);
+    font-weight: 900;
+}
+
+/* Cores de Utilitário */
+.text-primary { color: var(--color-primary) !important; }
+.text-secondary { color: var(--color-secondary) !important; }
+.text-accent { color: var(--color-accent) !important; }
+.text-text-dark { color: var(--color-text-dark) !important; }
+.text-text-light { color: var(--color-text-light) !important; }
+
+
+/* ==================================== */
+/* 🧭 NAVEGAÇÃO E HEADER (MAIOR ALTURA) */
+/* ==================================== */
+
+.site-header {
+    background-color: var(--color-card-bg);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1040;
+    position: fixed;
+    top: 0; 
+    width: 100%;
+}
+
+.site-header .navbar {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    min-height: var(--navbar-height);
+}
+
+.brand-logo {
+    width: 35px;
+    height: 35px;
+}
+
+.navbar-brand {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    color: var(--color-secondary) !important;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    color: var(--color-text-light) !important;
+    font-weight: 600;
+    padding: 0.75rem 1rem !important;
+}
+
+.nav-link:hover, .nav-item .active {
+    color: var(--color-accent) !important;
+}
+
+.nav-item .nav-link.active {
+    background-color: var(--color-primary);
+    border-radius: var(--border-radius-sm);
+    color: var(--color-secondary) !important;
+}
+
+
+/* ==================================== */
+/* ⚙️ FORMULÁRIOS E BOTÕES (MAIS ESPAÇO) */
+/* ==================================== */
+
+/* Estilo para inputs de formulário */
+.form-control, .form-select {
+    padding: 1rem 1rem; /* Padding interno generoso */
+    font-size: 1rem;
+    border-radius: var(--border-radius-sm);
+    border: 1px solid var(--color-muted);
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 0.25rem rgba(255, 215, 0, 0.3); 
+}
+
+.btn {
+    /* Novo Padding: Botões maiores e mais robustos */
+    padding: 0.85rem 1.8rem;
+    font-size: 1.05rem; 
+}
+
+.btn-primary-dev {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-secondary) !important;
+    font-weight: 700;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-primary-dev:hover {
+    background-color: #e0be00; 
+    border-color: #e0be00;
+}
+
+.btn-outline-dev {
+    border: 2px solid var(--color-secondary);
+    color: var(--color-secondary);
+    font-weight: 600;
+    background-color: transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-outline-dev:hover {
+    background-color: var(--color-secondary);
+    color: white;
+}
+
+/* Estilo para Switch (alternância) grande - CONFIGURAÇÃO */
+.form-switch-lg {
+    padding-left: 3.5rem; /* Ajusta o espaço para o switch */
+}
+
+.form-switch-lg .form-check-input {
+    width: 2.5rem; /* Largura maior */
+    height: 1.5rem; /* Altura maior */
+    margin-right: 1rem;
+}
+
+.form-switch-lg .form-check-input:checked {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+
+/* ==================================== */
+/* 🖼️ SEÇÕES E COMPONENTES (MÁXIMO ESPAÇO) */
+/* ==================================== */
+
+.section {
+    /* MÁXIMO ESPAÇAMENTO EXTERNO: 12rem */
+    padding-top: var(--spacing-section);
+    padding-bottom: var(--spacing-section);
+}
+
+/* Estilo de Cartão Limpo e Moderno */
+.card-dev {
+    /* NOVO MÁXIMO PADDING INTERNO: 2.5rem */
+    background-color: var(--color-card-bg);
+    border: 1px solid var(--color-muted);
+    border-radius: var(--border-radius-lg);
+    padding: 2.5rem !important; 
+    height: 100%;
+    transition: box-shadow 0.3s ease; 
+}
+
+.card-dev:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Cartão de Depoimentos */
+.testimonial-card {
+    background-color: white;
+    padding: 3.5rem; /* Máximo padding para depoimentos */
+    border-radius: var(--border-radius-lg);
+    border-left: 5px solid var(--color-primary);
+    text-align: left;
+    height: 100%;
+}
+
+.testimonial-card p {
+    font-style: italic;
+    color: var(--color-text-dark);
+}
+
+.testimonial-card span {
+    display: block;
+    margin-top: 1.5rem;
+    font-weight: 600;
+    color: var(--color-accent);
+}
+
+/* Formulário de Cadastro/Login (index.html) */
+.form-card-dev {
+    background-color: var(--color-card-bg);
+    border: 1px solid var(--color-muted);
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilização específica para as linhas de Denúncias (denuncia.html) */
+.denuncia-card strong {
+    color: var(--color-secondary);
+}
+
+/* ==================================== */
+/* 🏆 ESTILOS DO RANKING (rank.html)    */
+/* ==================================== */
+
+/* --- Cartões do Pódium (Top 3) --- */
+.podium-card {
+    border: none !important; 
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.podium-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Pódium #1 - Destaque (Maior sombra e cor primária) */
+.podium-1 {
+    background-color: var(--color-card-bg); 
+    border-bottom: 5px solid var(--color-primary) !important;
+}
+
+/* --- Crachás de Medalha (#1, #2, #3, #4+) --- */
+.rank-medal {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: white;
+    position: relative; 
+    top: 0;
+    left: 0;
+}
+
+.rank-card .rank-medal {
+    width: 30px;
+    height: 30px;
+    font-size: 0.8rem;
+}
+
+.medal-1 {
+    background: linear-gradient(145deg, gold, #ffd700);
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    border: 2px solid white;
+}
+
+.medal-2 {
+    background: linear-gradient(145deg, silver, #c0c0c0);
+    border: 2px solid white;
+}
+
+.medal-3 {
+    background: linear-gradient(145deg, #cd7f32, #a52a2a); 
+    border: 2px solid white;
+}
+
+/* --- Crachás de Nível (Platina, Ouro, Prata) --- */
+.nivel-badge {
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.platinum {
+    background-color: #E5E7EB; 
+    color: var(--color-secondary);
+    border: 1px solid #D1D5DB;
+    box-shadow: 0 0 8px rgba(229, 231, 235, 0.7);
+}
+
+.gold {
+    background-color: var(--color-primary); 
+    color: var(--color-secondary);
+    border: 1px solid #FFC700;
+}
+
+.silver {
+    background-color: #9CA3AF;
+    color: white;
+    border: 1px solid #6B7280;
+}
+
+/* --- Tags de Especialização e Ranking --- */
+.rank-tag, .area-tag {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 50px;
+    font-weight: 600;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.rank-tag {
+    background-color: var(--color-accent);
+    color: white;
+}
+
+.area-tag {
+    background-color: var(--color-muted);
+    color: var(--color-text-dark);
+}
+
+/* Estilo para a pontuação (Score) */
+.score {
+    color: var(--color-secondary); 
+}
+
+/* ==================================== */
+/* 📈 ESTILOS DO RELATÓRIO (relatorios.html) */
+/* ==================================== */
+
+/* Accordion (ajuste para ficar mais limpo e dentro do card-dev) */
+.accordion-flush.card-dev {
+    padding: 0 !important; /* Remove o padding extra do card para deixar o accordion flush */
+    overflow: hidden; /* Garante que as bordas arredondadas funcionem */
+}
+
+.accordion-item {
+    border-top: 1px solid var(--color-muted);
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--color-secondary);
+    background-color: var(--color-muted); 
+    box-shadow: none;
+    border-bottom: 1px solid var(--color-primary); /* Linha sutil de destaque */
+}
+
+.accordion-button {
+    font-weight: 700;
+    color: var(--color-text-dark);
+    padding: 1.25rem 1.5rem; /* Padding generoso */
+    transition: background-color 0.2s;
+}
+
+.accordion-body {
+    padding: 2rem 1.5rem; /* Padding interno generoso no corpo */
+}
+
+/* Tabela (ajuste para alinhar com o design) */
+.table th, .table td {
+    padding: 1.2rem 1rem; /* Mais padding nas células da tabela */
+    vertical-align: middle;
+    border-color: var(--color-muted);
+}
+
+.table-light {
+    background-color: var(--color-muted);
+}
+
+/* ==================================== */
+/* ✨ ESTILOS DO PERFIL ESPECIALISTA    */
+/* ==================================== */
+
+/* Avatar do Perfil */
+.profile-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    /* Usa a cor de fundo do cartão para a borda interna */
+    border-color: var(--color-card-bg) !important; 
+}
+
+/* Box de Avaliação (ex: 4.9) */
+.rating-box {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    padding: 0.5rem 1.5rem;
+    border-radius: var(--border-radius-lg);
+}
+
+/* Tabs do Especialista (Visual mais sólido e moderno) */
+.expert-tabs .nav-link {
+    color: var(--color-secondary);
+    background-color: var(--color-background); /* Fundo claro para links inativos */
+    border: none;
+    border-radius: var(--border-radius-sm) var(--border-radius-sm) 0 0;
+    margin-right: 0.5rem;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.expert-tabs .nav-link:hover {
+    background-color: var(--color-muted);
+}
+
+.expert-tabs .nav-link.active {
+    background-color: var(--color-card-bg); /* O ativo fica branco sobre o fundo cinza do card */
+    color: var(--color-accent) !important;
+    border-bottom: 3px solid var(--color-accent); /* Linha de destaque */
+}
+
+/* Estilo para itens do histórico dentro da tab */
+.history-item {
+    background-color: var(--color-background);
+    border-color: var(--color-muted) !important;
+    font-weight: 600;
+    color: var(--color-text-dark);
+}
+
+/* Comentários/Testemunhos */
+.testimonial-comment {
+    /* Padding e bordas do card-dev já se aplicam */
+    box-shadow: none; /* Remove a sombra padrão para não empilhar muitas sombras */
+    border: 1px solid var(--color-muted);
+}
+
+.testimonial-comment:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Sombra suave no hover */
+}
+
+
+/* ==================================== */
+/* 🦶 FOOTER                            */
+/* ==================================== */
+
+.site-footer {
+    background-color: var(--color-secondary);
+    color: #9CA3AF; 
+    font-size: 0.9rem;
+}
+
+
